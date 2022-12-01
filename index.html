@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="css/bulma.css" />
+    <link rel="stylesheet" href="css/hovercss.css" />
+  </head>
+  <body class="p-0 m-0">
+    <div class="container is-fluid">
+      <div class="columns">
+        <div class="column pt-6">
+          <aside class="menu">
+            <p class="menu-label">Administration</p>
+            <ul class="menu-list">
+              <li>
+                <a class="is-active">Dashboard</a>
+              </li>
+              <li>
+                <a>Menu 2</a>
+              </li>
+              <li>
+                <a>Menu 3</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div
+          class="column pt-6 is-four-fifths has-background-light"
+          style="height: 100vh"
+        >
+          <p class="menu-label">Series</p>
+          <div class="select mb-6 hvr-skew-forward">
+            <select id="series-select" onchange="selectCambia(this)">
+              <option></option>
+            </select>
+          </div>
+          <div class="columns">
+            <div class="column hvr-wobble-to-top-right">
+              <div id="chart-wrapper">
+                <canvas id="bar-chart"></canvas>
+              </div>
+            </div>
+            <div class="column hvr-wobble-to-top-right">
+              <div id="pie-wrapper">
+                <canvas id="pie-chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="js/chartjs/chart.umd.js"></script>
+  <script src="js/index.js"></script>
+</html>
